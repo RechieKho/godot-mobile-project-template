@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccxk7thqaeqj1"]
+
+[ext_resource type="Script" path="res://autoloads/gamplay_switcher/gameplay_switcher.gd" id="1_m761h"]
+[ext_resource type="Resource" uid="uid://cdgjqxbpp7tys" path="res://resources/scene_transitions/default_scene_transition.tres" id="2_phx6e"]
+
+[node name="GameplaySwitcher" type="Node"]
+script = ExtResource("1_m761h")
+scene_transition = ExtResource("2_phx6e")

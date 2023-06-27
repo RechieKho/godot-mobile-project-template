@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://c30258285y4nu"]
+
+[ext_resource type="Script" path="res://autoloads/gfx/gfx.gd" id="1_bwjcd"]
+[ext_resource type="Script" path="res://autoloads/gfx/distortion/distortions.gd" id="1_j2t0c"]
+[ext_resource type="PackedScene" uid="uid://p4j3e61sg5oq" path="res://autoloads/gfx/circular_blur/circular_blur.tscn" id="2_gx4xl"]
+[ext_resource type="PackedScene" uid="uid://cn4pbcoubhbdr" path="res://autoloads/gfx/circular_cover/circular_cover.tscn" id="3_d67oe"]
+
+[node name="GFX" type="Node"]
+script = ExtResource("1_bwjcd")
+
+[node name="Distortions" type="Node" parent="."]
+script = ExtResource("1_j2t0c")
+
+[node name="CircularBlur" parent="." instance=ExtResource("2_gx4xl")]
+
+[node name="CircularCover" parent="." instance=ExtResource("3_d67oe")]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SceneTransition" load_steps=2 format=3 uid="uid://cdgjqxbpp7tys"]
+
+[ext_resource type="Script" path="res://scripts/scene_transition.gd" id="1_ct7c6"]
+
+[resource]
+script = ExtResource("1_ct7c6")
+color = Color(0, 0, 0, 1)
+pattern_enter = "fade"
+pattern_exit = "fade"

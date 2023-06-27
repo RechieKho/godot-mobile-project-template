@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Godot mobile game template"
+config/features=PackedStringArray("4.0", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+SoundPlayer="*res://autoloads/sound_player/sound_player.gd"
+SceneManager="*res://addons/scene_manager/SceneManager.tscn"
+GameplaySwitcher="*res://autoloads/gamplay_switcher/gameplay_switcher.tscn"
+GFX="*res://autoloads/gfx/gfx.tscn"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.211765, 0.243137, 0.364706, 1)

@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn4pbcoubhbdr"]
+
+[ext_resource type="Script" path="res://autoloads/gfx/circular_cover/circular_cover.gd" id="1_nimhi"]
+[ext_resource type="Shader" path="res://autoloads/gfx/circular_cover/circular_cover.gdshader" id="2_equ2l"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+resource_local_to_scene = true
+shader = ExtResource("2_equ2l")
+shader_parameter/cover_center = Vector2(0.5, 0.5)
+shader_parameter/cover_size = 0.0
+shader_parameter/cover_scatter_intensity = 0.0
+shader_parameter/cover_color = null
+
+[node name="CircularCover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nimhi")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="Effect" type="ColorRect" parent="."]
+material = SubResource("1")
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Markers" type="Node" parent="."]
+
+[node name="CoverMark" type="Marker2D" parent="Markers"]
