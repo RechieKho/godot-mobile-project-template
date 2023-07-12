@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgla7c40v35vo"]
+
+[ext_resource type="Script" path="res://prefabs/camcorder/camcorder.gd" id="1_qvpi3"]
+[ext_resource type="Script" path="res://prefabs/camcorder/camera_shaker.gd" id="2_cbgm7"]
+
+[node name="Camcorder" type="Camera2D"]
+position_smoothing_enabled = true
+script = ExtResource("1_qvpi3")
+metadata/_edit_group_ = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
+[node name="CameraShaker" type="Timer" parent="."]
+script = ExtResource("2_cbgm7")
+
+[node name="ReferenceRects" type="Node" parent="."]
+
+[node name="Limit" type="ReferenceRect" parent="ReferenceRects"]
