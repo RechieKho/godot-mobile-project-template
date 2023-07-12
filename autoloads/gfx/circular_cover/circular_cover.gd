@@ -29,3 +29,12 @@ func _process(delta):
 	var uv_position = cover_mark.get_global_transform_with_canvas().get_origin() / get_viewport_rect().size
 	uv_position.y = 1 - uv_position.y
 	cover_center = uv_position
+
+func cover(cover_scatter_intensity := 0, cover_size := 0, tween_duration := 0.5):
+	var tween := create_tween().set_parallel()
+	tween.tween_property(self, "cover_size", cover_size, tween_duration) 
+	tween.tween_property(self, "cover_scatter_intensity", cover_scatter_intensity, tween_duration)
+	await tween.finished
+
+func clear():
+	await cover(1, 0)

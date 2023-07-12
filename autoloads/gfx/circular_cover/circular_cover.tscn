@@ -7,7 +7,7 @@
 resource_local_to_scene = true
 shader = ExtResource("2_equ2l")
 shader_parameter/cover_center = Vector2(0.5, 0.5)
-shader_parameter/cover_size = 0.0
+shader_parameter/cover_size = 1.0
 shader_parameter/cover_scatter_intensity = 0.0
 shader_parameter/cover_color = null
 

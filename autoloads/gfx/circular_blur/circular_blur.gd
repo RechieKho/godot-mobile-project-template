@@ -29,3 +29,13 @@ func _process(delta):
 	var uv_position = blur_mark.get_global_transform_with_canvas().get_origin() / get_viewport_rect().size
 	uv_position.y = 1 - uv_position.y
 	blur_center = uv_position
+
+func blur(blur_size := 0.3, blur_intensity := 3.0, blur_scatter_intensity := 0.8, tween_duration := 0.5):
+	var tween := create_tween().set_parallel()
+	tween.tween_property(self, "blur_size", blur_size, tween_duration) 
+	tween.tween_property(self, "blur_intensity", blur_intensity, tween_duration)
+	tween.tween_property(self, "blur_scatter_intensity", blur_scatter_intensity, tween_duration)
+	await tween.finished
+
+func clear():
+	await blur(1, 0, 0)

@@ -8,7 +8,7 @@ resource_local_to_scene = true
 shader = ExtResource("2_hjyqy")
 shader_parameter/blur_center = Vector2(0.5, 0.5)
 shader_parameter/blur_intensity = 0.0
-shader_parameter/blur_size = 0.0
+shader_parameter/blur_size = 1.0
 shader_parameter/blur_scatter_intensity = 0.0
 
 [node name="CircularBlur" type="Control"]
