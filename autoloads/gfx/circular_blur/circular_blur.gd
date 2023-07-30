@@ -2,7 +2,7 @@ extends Control
 class_name CircularBlur
 
 @onready var effect := $Effect
-@onready var blur_mark := $Markers/blurMark
+@onready var blur_mark := $Markers/BlurMark
 
 var blur_center : Vector2 :
 	set(value): effect.material.set_shader_parameter("blur_center", value)
