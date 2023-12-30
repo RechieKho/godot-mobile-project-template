@@ -20,6 +20,7 @@ SoundPlayer="*res://autoloads/sound_player/sound_player.gd"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 GameplaySwitcher="*res://autoloads/gamplay_switcher/gameplay_switcher.tscn"
 GFX="*res://autoloads/gfx/gfx.tscn"
+GameDataManager="*res://autoloads/game_data/game_data_manager.gd"
 
 [rendering]
 
