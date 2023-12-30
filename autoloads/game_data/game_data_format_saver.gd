@@ -1,7 +1,7 @@
 extends ResourceFormatSaver
 class_name GameDataFormatSaver
 
-func _get_recognized_extensions(resource: Resource):
+func _get_recognized_extensions(_resource: Resource):
 	return [GameData.EXTENSION]
 
 func _recognize(resource: Resource):

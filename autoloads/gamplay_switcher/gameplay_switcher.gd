@@ -3,8 +3,6 @@ extends Node
 @export var scene_transition : SceneTransition
 
 func switch(scene_path: String, options := {}):
-	var current_scene := get_tree().get_current_scene()
-	
 	var on_ready = options.get("on_ready") 
 	options["on_ready"] = func(gameplay):
 		assert(gameplay is Gameplay, "Scene '{0}' is not a `Gameplay`.".format([scene_path]))

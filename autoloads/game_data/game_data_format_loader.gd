@@ -4,7 +4,7 @@ class_name GameDataFormatLoader
 func _get_recognized_extensions():
 	return [GameData.EXTENSION]
 
-func _recognize_path(path, type):
+func _recognize_path(path, _type):
 	return path.begins_with(GameData.DIRNAME) and \
 		path.ends_with(GameData.EXTENSION)
 

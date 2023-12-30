@@ -7,5 +7,5 @@ class_name Gameplay
 func _enter_tree():
 	SoundPlayer.play_music("BGM", background_music)
 
-func setup(options := {}):
+func setup(_options := {}):
 	pass
