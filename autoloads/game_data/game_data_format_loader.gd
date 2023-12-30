@@ -2,11 +2,11 @@ extends ResourceFormatLoader
 class_name GameDataFormatLoader
 
 func _get_recognized_extensions():
-	return [GameData.EXTENSION]
+	return [GameDataManager.EXTENSION]
 
 func _recognize_path(path, _type):
-	return path.begins_with(GameData.DIRNAME) and \
-		path.ends_with(GameData.EXTENSION)
+	return path.begins_with(GameDataManager.DIRNAME) and \
+		path.ends_with(GameDataManager.EXTENSION)
 
 func _load(path, _original_path, _use_sub_threads, _cache_mode):
 	var file := FileAccess.open_encrypted_with_pass(
